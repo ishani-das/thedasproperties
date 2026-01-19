@@ -12,6 +12,7 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import "./../../App.css";
+import { Link as ScrollLink } from "react-scroll";
 
 export const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -24,15 +25,24 @@ export const Navbar = ({ toggle }) => {
   };
 
   useEffect(() => {
-      window.addEventListener('scroll', changeNav);      
-  }, [])
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
   return (
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">
-            <h1 className="logo-text">syntec</h1>
+            <NavLogo
+              to="top"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              <h1 className="logo-text">The Das Properties</h1>
+            </NavLogo>
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -41,19 +51,21 @@ export const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="about">About</NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks to="discover">Discover</NavLinks>
+            </NavItem> */}
+            <NavItem>
+              <NavLinks to="services">Properties</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks to="footer" smooth={true} duration={500}>
+                Contact
+              </NavLinks>
             </NavItem>
           </NavMenu>
-          <NavBtn>
+          {/* <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          </NavBtn>
+          </NavBtn> */}
         </NavbarContainer>
       </Nav>
     </>

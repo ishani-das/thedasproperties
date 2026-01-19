@@ -14,7 +14,14 @@ export const InfoSection = ({ id, title, subtitle, text, image, btnText }) => {
               <Subtitle>{subtitle}</Subtitle>
               <Title className="text-white mb-5">{title}</Title>
               <p className="text-white mb-4">{text}</p>
-              <ButtonBasic to="" primary="true" dark="true" className="mx-auto">
+              <ButtonBasic
+                to="footer"
+                smooth={true}
+                duration={500}
+                primary="true"
+                dark="true"
+                className="mx-auto"
+              >
                 {btnText}
               </ButtonBasic>
             </div>

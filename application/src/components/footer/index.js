@@ -9,10 +9,23 @@ import "./../../App.css";
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <FooterWrapper className="container py-5">
-        <div className="row gx-5 px-4 gy-4">
-          <div className="col-lg-3 col-sm-6">
+        <FooterH2>Contact</FooterH2>
+        <FooterLink href="mailto:dasinvestment101@gmail.com?subject=Hello!">
+          ✉️ dasinvestment101@gmail.com
+        </FooterLink>
+        <FooterLink href="tel:6507478127">☎️ (650) 747-8127</FooterLink>
+        {/* <div className="row gx-5 px-4 gy-4"> */}
+        {/* <div className="col-lg-3 col-sm-6">
+            <FooterH2>Contact</FooterH2>
+            <FooterLink href="#">✉️ dasinvestment101@gmail.com</FooterLink>
+            <FooterLink href="#">☎️ (650) 747-8127</FooterLink>
+            <FooterLink href="#">Careers</FooterLink>
+            <FooterLink href="#">Investors</FooterLink>
+            <FooterLink href="#">Terms of Service</FooterLink>
+          </div> */}
+        {/* <div className="col-lg-3 col-sm-6">
             <FooterH2>About Us</FooterH2>
             <FooterLink href="#">How it works</FooterLink>
             <FooterLink href="#">Testimonials</FooterLink>
@@ -40,12 +53,15 @@ const Footer = () => {
             <FooterLink href="#">Youtube</FooterLink>
             <FooterLink href="#">Facebook</FooterLink>
             <FooterLink href="#">LinkedIn</FooterLink>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 mt-5 ">
-            <h1 className="logo-text gray-text center-align">- syntec -</h1>
-          </div>
+          </div> */}
+        {/* </div> */}
+        <div className="row" style={{ textAlign: "center" }}>
+          <p>© The Das Properties 2025</p>
+          {/* <div className="col-12 mt-5 "> */}
+          {/* <h1 className="logo-text gray-text center-align">
+              © The Das Properties 2025
+            </h1> */}
+          {/* </div> */}
         </div>
       </FooterWrapper>
     </FooterContainer>
