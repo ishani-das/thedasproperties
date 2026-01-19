@@ -1,9 +1,9 @@
 # The Das Properties
 
-A website to demonstrate Das Properties homes!
+A website to exhibit Das Properties homes! V1 currently deployed at https://thedasproperties.vercel.app/.
 
 
-## To run:
+## To run locally:
 - cd application
 - export NODE_OPTIONS=--openssl-legacy-provider
 - npm start
